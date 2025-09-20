@@ -1,12 +1,11 @@
 from typing import Dict, Any
 
-def create_content_strategy(achievements: Dict[str, Any], competitor_insights: Dict[str, Any]) -> Dict[str, Any]:
+def create_content_strategy(achievements: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Creates a content strategy based on EPAM's achievements and competitor insights.
+    Creates a content strategy based on EPAM's achievements.
 
     Args:
         achievements (Dict[str, Any]): EPAM's achievements data
-        competitor_insights (Dict[str, Any]): Competitor analysis insights
 
     Returns:
         Dict[str, Any]: A comprehensive content strategy
@@ -17,5 +16,26 @@ def create_content_strategy(achievements: Dict[str, Any], competitor_insights: D
     return {
         "strategy_created": True,
         "based_on_achievements": achievements,
-        "based_on_competitors": competitor_insights
+        "content_pillars": [
+            {
+                "pillar": "Innovation & Technology",
+                "description": "Showcase EPAM's cutting-edge solutions and technological expertise",
+                "content_types": ["Case studies", "Tech insights", "Innovation spotlights"]
+            },
+            {
+                "pillar": "Company Culture & Values",
+                "description": "Highlight EPAM's inclusive culture and employee-centric approach",
+                "content_types": ["Employee spotlights", "Culture stories", "Values in action"]
+            },
+            {
+                "pillar": "Industry Leadership",
+                "description": "Position EPAM as a thought leader in digital transformation",
+                "content_types": ["Industry insights", "Expert opinions", "Market trends"]
+            }
+        ],
+        "key_messages": [
+            "EPAM: Where innovation meets human potential",
+            "Transforming businesses through technology and talent",
+            "Building the future, one solution at a time"
+        ]
     }

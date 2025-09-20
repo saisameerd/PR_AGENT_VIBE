@@ -14,14 +14,14 @@ content_strategy_agent = Agent(
     - 'analyze_epam_achievements': Analyzes EPAM's recent achievements and milestones
     - 'create_content_strategy': Creates a comprehensive content strategy
 
-    Use the content request from the user and competitor analysis to inform your strategy.
+    Use the content request from the user and any available competitor analysis to inform your strategy.
     </SYSTEM>
     
     <WORKFLOW>
     The steps in your workflow should be:
 
     1. Call `analyze_epam_achievements` to understand EPAM's recent milestones and achievements
-    2. Call 'create_content_strategy' to develop a content strategy based on achievements and competitor insights
+    2. Call 'create_content_strategy' with the achievements data to develop a content strategy
     3. Identify key messaging themes and content pillars
     4. Create content calendar suggestions
 

@@ -26,48 +26,58 @@ Root Agent (EPAM Corporate PR Manager)
 
 ## 🚀 **Quick Start**
 
-### Prerequisites
-
-- Python 3.11+
-- Node.js 18+
-- Tavily API Key (free tier available)
-
-### 1. Backend Setup
-
+### Option 1: Docker (Recommended - Easiest)
 ```bash
-# Navigate to project directory
-cd epam-corporate-pr-agent
-
-# Install Python dependencies
-pip install -r requirements.txt
+# Clone the repository
+git clone https://github.com/saisameerd/PR_AGENT_VIBE.git
+cd PR_AGENT_VIBE
 
 # Set up environment variables
 cp env.example .env
-# Edit .env with your Tavily API key
+# Edit .env with your API keys
 
-# Run the agent
-python run_agent.py
+# Run with Docker
+docker-compose up --build
+
+# Access the application
+# Frontend: http://localhost:3000
+# Backend: http://localhost:8000
 ```
 
-### 2. Frontend Setup
+### Option 2: Manual Setup
 
+#### Windows:
 ```bash
-# Navigate to frontend directory
-cd frontend
+# Run the setup script
+setup_windows.bat
 
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
+# Run the application
+run_local.bat
 ```
 
-### 3. Start ADK API Server
-
+#### macOS/Linux:
 ```bash
-# In the main project directory
-adk api_server --port 8000 --host 0.0.0.0 --allow_origins "*" .
+# Make setup script executable
+chmod +x setup_unix.sh
+
+# Run the setup script
+./setup_unix.sh
+
+# Run the application
+chmod +x run_local.sh
+./run_local.sh
 ```
+
+### Prerequisites
+
+#### For Docker Setup:
+- Docker Desktop installed
+- Git installed
+
+#### For Manual Setup:
+- Python 3.11+ installed
+- Node.js 18+ installed
+- Git installed
 
 ## 🔧 **Configuration**
 
